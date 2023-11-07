@@ -12,7 +12,6 @@ def main():
 
     # get user input
     air_quality_str = input("Please enter a number from 0-500: ")
-    print("\n")
 
     # try casting user input into an integer
     try:
@@ -22,7 +21,7 @@ def main():
         if (air_quality_int <= 500) and (air_quality_int >= 0):
 
             # check if input is between 0-50
-            if (air_quality_int >= 0) and (air_quality_int <= 50):
+            if air_quality_int <= 50:
                 print(
                     "{} is a good air quality, it ranges between 0-50!\n".format(
                         air_quality_int
@@ -40,7 +39,7 @@ def main():
             # check if input is between 101-150
             elif (air_quality_int >= 101) and (air_quality_int <= 150):
                 print(
-                    "{} is an unhealthy for sensitive groups, it ranges between 101-150.\n".format(
+                    "{} is an unhealthy for sensitive groups air quality, it ranges between 101-150.\n".format(
                         air_quality_int
                     )
                 )
